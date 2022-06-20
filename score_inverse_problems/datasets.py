@@ -18,7 +18,6 @@
 import jax
 import tensorflow as tf
 import tensorflow_datasets as tfds
-import ct2d, ct2d_512, ct2d_320, ldct_512, fastmri_knee_single
 
 
 def get_data_scaler(config):
