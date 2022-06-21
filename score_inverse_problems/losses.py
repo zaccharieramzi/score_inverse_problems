@@ -20,9 +20,10 @@ import flax
 import jax
 import jax.numpy as jnp
 import jax.random as random
-from models import utils as mutils
-from sde_lib import VESDE, VPSDE
-from utils import batch_mul
+
+from score_inverse_problems.models import utils as mutils
+from score_inverse_problems.sde_lib import VESDE, VPSDE
+from score_inverse_problems.utils import batch_mul
 
 
 def get_optimizer(config):

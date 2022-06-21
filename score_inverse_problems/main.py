@@ -15,13 +15,16 @@
 
 """Training and evaluation"""
 
-import run_lib
+import logging
+import os
+
 from absl import app
 from absl import flags
 from ml_collections.config_flags import config_flags
 import tensorflow as tf
-import logging
-import os
+
+from score_inverse_problems import run_lib
+
 
 FLAGS = flags.FLAGS
 

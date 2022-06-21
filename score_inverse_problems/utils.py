@@ -31,8 +31,8 @@ import jax.numpy as jnp
 from PIL import Image
 import tensorflow as tf
 
-T = TypeVar("T")
 
+T = TypeVar("T")
 
 def batch_add(a, b):
   return jax.vmap(lambda a, b: a + b)(a, b)

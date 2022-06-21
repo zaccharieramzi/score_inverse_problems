@@ -18,18 +18,22 @@
 """Various sampling methods."""
 import functools
 
+import abc
+import flax
 import jax
 import jax.numpy as jnp
 import jax.random as random
-import abc
-import flax
-
-from models.utils import from_flattened_numpy, to_flattened_numpy, get_score_fn
 from scipy import integrate
-import sde_lib
-from utils import batch_mul, batch_add
 
-from models import utils as mutils
+from score_inverse_problems import sde_lib
+from score_inverse_problems.models.utils import (
+  from_flattened_numpy,
+  to_flattened_numpy,
+  get_score_fn,
+)
+from score_inverse_problems.utils import batch_mul, batch_add
+from score_inverse_problems.models import utils as mutils
+
 
 _CORRECTORS = {}
 _PREDICTORS = {}
