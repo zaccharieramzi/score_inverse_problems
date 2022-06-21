@@ -15,17 +15,18 @@
 
 """All functions and modules related to model definition.
 """
+import functools
 from typing import Any
 
 import flax
-import functools
+from flax.training import checkpoints
 import jax.numpy as jnp
-import sde_lib
 import jax
 import numpy as np
-from models import wideresnet_noise_conditional
-from flax.training import checkpoints
-from utils import batch_mul
+
+from score_inverse_problems import sde_lib
+from score_inverse_problems.models import wideresnet_noise_conditional
+from score_inverse_problems.utils import batch_mul
 
 
 # The dataclass that stores all training states
